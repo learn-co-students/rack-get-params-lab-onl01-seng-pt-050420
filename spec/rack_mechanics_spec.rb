@@ -30,7 +30,7 @@ describe "Shopping Cart Rack App" do
     it 'Will not add an item that is not in the @@items list' do
       Application.class_variable_set(:@@items, ["Figs","Oranges"])
       get '/add?item=Apples'
-      expect(last_response.body).to include("We don't have that item")
+      expect(last_respons e.body).to include("We don't have that item")
     end
   end
 end
